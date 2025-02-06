@@ -19,10 +19,14 @@ public class Program {
         System.out.print("Tax: ");
         employee.tax = sc.nextDouble();
 
-        //métodos
-
         System.out.println();
-        System.out.print(employee.name + ", " + employee.grossSalary + ", "+ employee.tax);
+        System.out.println("Employee: " + employee.name + ", " + employee.netSalary());
+
+        System.out.print("Wich percentage to increase salary? ");
+        double percentage = sc.nextDouble();
+        employee.increaseSalary(percentage);
+
+        System.out.println("Updated data: " + employee);
 
 
         sc.close();
