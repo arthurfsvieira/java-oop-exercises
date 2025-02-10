@@ -18,15 +18,14 @@ public class Program {
         student.secondGrade = sc.nextDouble();
         student.thirdGrade = sc.nextDouble();
 
+        System.out.println("Final grade = " + student.finalGrade());
+
         if (student.finalGrade() > 60) {
-            System.out.println("Final grade: " + student.finalGrade());
             System.out.print("PASS");
         } else {
-            System.out.println("Final grade: " + student.finalGrade());
             System.out.println("FAILED");
             System.out.print("Missing points: " + student.missingPoints() + " points.");
         }
-
 
         sc.close();
     }
