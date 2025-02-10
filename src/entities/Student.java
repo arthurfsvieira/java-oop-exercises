@@ -7,11 +7,11 @@ public class Student {
     public double thirdGrade;
 
     public double finalGrade() {
-
+        return firstGrade + secondGrade + thirdGrade;
     }
 
     public double missingPoints() {
-
+        return 60 - finalGrade();
     }
 }
 
