@@ -7,7 +7,6 @@ public class Account {
 
     //Constructors
 
-
     public Account() {
     }
 
