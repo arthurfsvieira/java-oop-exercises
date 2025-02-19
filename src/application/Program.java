@@ -11,9 +11,21 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Account acc = new Account();
         System.out.print("Enter account number: ");
-        acc.setAccountHolder();
+        int accountNumber = sc.nextInt();
+        System.out.print("Enter account holder: ");
+        String accountName = sc.nextLine();
+        System.out.print("Is there a initial deposit (y/n)? ");
+        String answer = sc.nextLine();
+        if (answer == "y") {
+            System.out.print("Enter initial deposit value: ");
+            double balance = sc.nextDouble();
+        } else {
+           double balance = 0;
+        }
+
+        System.out.println(accountName, accountNumber, balance); //What?
+
 
         sc.close();
     }
