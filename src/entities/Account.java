@@ -1,50 +1,52 @@
 package entities;
 
 public class Account {
-    private int accountNumber;
-    private String accountHolder;
-    private double initialDeposit;
+    private int number;
+    private String holder;
+    private double balance;
 
-    //Constructors
-
-    public Account() {
+    public Account(int number, String holder, double initialDeposit) {
+        this.number = number;
+        this.holder = holder;
+        deposit(initialDeposit);
     }
 
-    public Account(String accountHolder, int accountNumber, double initialDeposit) {
-        this.accountHolder = accountHolder;
-        this.accountNumber = accountNumber;
-        this.initialDeposit = initialDeposit;
+    public Account(int number, String holder) {
+        this.number = number;
+        this.holder = holder;
     }
 
-    public Account(String accountHolder, int accountNumber) {
-        this.accountHolder = accountHolder;
-        this.accountNumber = accountNumber;
+    public int getNumber() {
+        return number;
     }
 
-    //Methods
-
-
-    public int getAccountNumber() {
-        return accountNumber;
+    public String getHolder() {
+        return holder;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setHolder(String holder) {
+        this.holder = holder;
     }
 
-    public String getAccountHolder() {
-        return accountHolder;
+    public double getBalance() {
+        return balance;
     }
 
-    public void setAccountHolder(String accountHolder) {
-        this.accountHolder = accountHolder;
+    public void deposit(double amount) {
+        balance += amount;
     }
 
-    public double getInitialDeposit() {
-        return initialDeposit;
+    public void withdraw(double amount) {
+        balance -= amount + 5.00;
     }
 
-    public void setInitialDeposit(double initialDeposit) {
-        this.initialDeposit = initialDeposit;
+    public String toString () {
+        return "Account "
+                + number
+                + ", Holder: "
+                + holder
+                +", Balance: $ "
+                + String.format("%.2f", balance);
+
     }
 }
