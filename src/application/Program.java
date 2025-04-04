@@ -70,3 +70,4 @@ public class Program {
     }
 }
 //aula de vetotes
+// LETS STUDY QA
